@@ -1,0 +1,11 @@
+uuid: f25b8e87-e737-4fa7-aae1-5268b6377ca5
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: uUvvUnhovZckJ3QiKjYo10863qm8R6Gk0zX2R4d6IMA
+id: twitter
+label: Twitter
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

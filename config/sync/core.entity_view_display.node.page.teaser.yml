@@ -1,0 +1,32 @@
+uuid: 26bd72a8-c6f3-4dde-84c4-2d2b474438f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.page.body
+    - node.type.page
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: wlMO-Pcl3de2sls1Sw3dCi_u9FRCsKlK4g2zNa8Au7g
+id: node.page.teaser
+targetEntityType: node
+bundle: page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 100
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 101
+    region: content
+hidden:
+  langcode: true
+  shariff_field: true

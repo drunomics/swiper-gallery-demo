@@ -1,0 +1,11 @@
+uuid: 9fe297e1-7d83-45be-aee3-248b63c830de
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: daZoj-JENtDwoX9THEJL3VwCC94V7bziw8kLf3veTcA
+id: quote
+label: Quote
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

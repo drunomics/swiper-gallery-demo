@@ -1,0 +1,28 @@
+uuid: 0ff8d99b-09ed-438e-ba9d-4cc5a75d2620
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quote.field_text
+    - paragraphs.paragraphs_type.quote
+  module:
+    - text
+_core:
+  default_config_hash: 0Nee_DdwrIvokHAX7AOLDyzgQL3VMoOKijm71BDvVZo
+id: paragraph.quote.default
+targetEntityType: paragraph
+bundle: quote
+mode: default
+content:
+  field_text:
+    type: text_textarea
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

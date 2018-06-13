@@ -1,0 +1,49 @@
+name: swiper-gallery-demo
+description: 'Drupal Thunder demo project for the SwiperGallery.'
+git:
+  url: 'git@bitbucket.org:drunomics/swiper-gallery-demo.git'
+commands:
+  setup: |
+    echo "PHAPP_ENV=$PHAPP_ENV" > .env-id.env
+    if [ "$PHAPP_ENV" = "docker" ]; then
+      ./dcp.sh up -d
+      ./dcp.sh exec web ./scripts/setup-base.sh
+    else
+      ./scripts/setup-base.sh
+    fi
+    
+  environment: |
+    source dotenv/loader.sh
+    
+  build: |
+    EXTRA_ARGS=$([ $PHAPP_ENV_MODE = 'production' ] && echo '--no-dev' || echo '');
+    composer install --no-interaction $EXTRA_ARGS
+
+  clean: |
+    # Clean composer vendor via the provided script.
+    composer clean
+    
+  status: |
+    drush status --fields=bootstrap | grep 'bootstrap' -q
+
+  init: |
+    drush sql-create -y &&
+    zcat dumps/init.sql.gz | drush sql:cli &&
+    drush updatedb -y &&
+    # Skip config-import when there is no config.
+    if [ -f config/sync/core.extension.yml ]; then
+      drush cim -y && drush cr
+    fi
+
+  install: |
+    chmod +w web/sites/default/settings.php &&
+    drush sql-create -y &&
+    SITE=${SITE:-default} &&
+    drush site-install -y --sites-subdir=$SITE --config-dir=../config/sync ${INSTALL_PROFILE:-minimal}
+
+  update: |
+    drush updatedb -y &&
+    # Skip config-import when there is no config.
+    if [ -f config/sync/core.extension.yml ]; then
+      drush cim -y && drush cr
+    fi

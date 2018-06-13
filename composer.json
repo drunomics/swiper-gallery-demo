@@ -1,0 +1,165 @@
+{
+    "name": "drunomics/swiper-gallery-demo",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "drunomics GmbH",
+            "role": "Creator."
+        }
+    ],
+    "require": {
+        "burdamagazinorg/thunder": "^8.2",
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6",
+        "drunomics/swiper_gallery": "dev-master",
+        "drupal-composer/drupal-scaffold": "^2.2",
+        "drupal/admin_toolbar": "^1.0",
+        "drupal/core": "^8.5",
+        "drush/drush": "9.*",
+        "kenwheeler/slick": "1.8.1",
+        "oomphinc/composer-installers-extender": "1.*",
+        "symfony/dotenv": "^3.4",
+        "wikimedia/composer-merge-plugin": "1.*"
+    },
+    "require-dev": {
+        "behat/mink": "~1.7",
+        "behat/mink-goutte-driver": "~1.2",
+        "devinci/devinci-behat-extension": "^0.1.0",
+        "dmore/behat-chrome-extension": "^1.1",
+        "drunomics/behat-drupal-utils": "^1.0",
+        "drupal/coder": "^8.2",
+        "drupal/drupal-extension": "^3.2",
+        "phpunit/phpunit": ">=4.8.28 <5",
+        "sensiolabs/security-checker": "^4.0"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drunomics.com"
+        },
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/drunomics/swiper-gallery"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "kenwheeler/slick",
+                "version": "1.8.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/kenwheeler/slick/archive/v1.8.1.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "classmap": [
+            "scripts/composer/CleanCommand.php",
+            "scripts/composer/PharInstaller.php"
+        ],
+        "files": ["dotenv/loader.php"]
+    },
+    "scripts": {
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+        "process-replacements": "php scripts/composer/process-replacements.php",
+        "install-phar-tools": [
+            "drunomics\\Composer\\PharInstaller::installPharTools"
+        ],
+        "init-setup": [
+            "@install-phar-tools"
+        ],
+        "post-root-package-install": [
+            "rm README.md && mv README.md.dist README.md",
+            "./scripts/init-devsetup.sh",
+            "@process-replacements",
+            "rm -rf tests/drupal-project .travis.yml"
+        ],
+        "post-create-project-cmd": "@init-setup",
+        "post-install-cmd": "@init-setup",
+        "post-update-cmd": "@init-setup",
+        "clean": [
+            "drunomics\\Composer\\CleanCommand::runCommand"
+        ],
+        "cs": "phpcs --colors",
+        "cbf": "phpcbf",
+        "check-security": "security-checker security:check",
+        "test": "./tests/behat/run.sh --colors",
+        "project-backup": "drush sql-dump --result-file=../dumps/init.sql --gzip --skip-tables-key=common"
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "initial": {
+                "sites/default/default.services.yml": "web/sites/default/services.yml",
+                "sites/example.settings.local.php": "web/sites/example.local.settings.php"
+            },
+            "excludes": [
+                "sites/development.services.yml",
+                "sites/example.settings.local.php"
+            ]
+        },
+        "installer-types": ["library", "npm-asset", "bower-asset"],
+        "installer-paths": {
+            "drush/contrib/{$name}": ["type:drupal-drush"],
+            "web/core": ["type:drupal-core"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "web/libraries/{$name}/": [
+                "type:drupal-library",
+                "type:npm-asset",
+                "type:bower-asset"
+            ],
+            "web/modules/drunomics/{$name}": ["vendor:drunomics"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"]
+        },
+        "merge-plugin": {
+            "include": [
+                "web/modules/custom/*/composer.json"
+            ],
+            "recurse": false,
+            "replace": false,
+            "merge-extra": false
+        },
+        "tools": {
+            "phapp": {
+                "url": "https://github.com/drunomics/phapp-cli/releases/download/0.6.2/phapp.phar",
+                "version": "0.6.2"
+            }
+        },
+        "scripts-description": {
+            "clean": "Removes files of installed packages.",
+            "cs": "Run coding style checks using phpcs.",
+            "cbf": "Run coding style fixes using phpcbf.",
+            "check-security": "Verify only securie packages are installed.",
+            "install-phar-tools": "Installs phar tools used by this project.",
+            "test": "Run tests."
+        },
+        "enable-patching": true,
+        "composer-exit-on-patch-failure": true
+    },
+    "config": {
+        "platform": {
+            "php": "7.0.8"
+        },
+        "sort-packages": true,
+        "preferred-install": {
+            "drunomics/*": "source",
+            "*": "dist"
+        }
+    }
+}

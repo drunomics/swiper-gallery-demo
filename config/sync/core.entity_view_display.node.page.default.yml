@@ -1,0 +1,30 @@
+uuid: 8f9a82a0-78bb-4820-8f40-f64c89ceb537
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page.body
+    - node.type.page
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: TqOUiB-SgMCP53I5fWwbR6y_v0U_y28ZSN6ZbSAnrgc
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 101
+    region: content
+hidden:
+  langcode: true
+  shariff_field: true

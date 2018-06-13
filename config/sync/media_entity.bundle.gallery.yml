@@ -1,0 +1,17 @@
+uuid: caff1924-d65d-4ed7-a2c7-d218922b0584
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_slideshow
+_core:
+  default_config_hash: Xh3MssuE0lR2zxTmbarnCgqQqjIb4u_kcjqt_MqK1xY
+id: gallery
+label: Gallery
+description: ''
+type: slideshow
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration:
+  source_field: field_media_images
+field_map: {  }

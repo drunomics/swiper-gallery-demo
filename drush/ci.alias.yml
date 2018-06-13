@@ -1,0 +1,16 @@
+develop:
+  uri: 'swiper-gallery-demo.ci.drunomics.com'
+  root: /srv/default/web
+  remote-host: 'swiper-gallery-demo.ci.drunomics.com'
+  target-command-specific:
+    sql-sync:
+      enable:
+        - stage_file_proxy
+master:
+  uri: 'swiper-gallery-demo--master.ci.drunomics.com'
+  root: /srv/default/web
+  remote-host: 'swiper-gallery-demo--master.ci.drunomics.com'
+  target-command-specific:
+    sql-sync:
+      enable:
+        - stage_file_proxy

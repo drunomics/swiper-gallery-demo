@@ -1,0 +1,29 @@
+uuid: f5a8e891-4068-410f-afbc-cc948109c28f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.article
+    - taxonomy.vocabulary.tags
+_core:
+  default_config_hash: '-mDIywXCMANjsNcEWh83SP7Pi7HOHoLCMKw9oRvpp5c'
+id: node.article.field_tags
+field_name: field_tags
+entity_type: node
+bundle: article
+label: Tags
+description: 'Multiple tags can be separated with (,) comma. Tags can be modified <a href="/admin/structure/taxonomy/manage/tags/overview" target="_blank">here</a>.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: _none
+    auto_create: true
+field_type: entity_reference
