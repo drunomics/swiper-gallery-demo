@@ -1,0 +1,10 @@
+uuid: 9b194a9f-9974-4a19-9a2a-c4a1181e879e
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.gallery_thumbs_preview
+label: 'Gallery - Thumbs Preview'
+targetEntityType: media
+cache: true

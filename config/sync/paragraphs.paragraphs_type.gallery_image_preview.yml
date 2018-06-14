@@ -1,0 +1,9 @@
+uuid: 8502a49d-d349-4682-b656-5af13347cc86
+langcode: en
+status: true
+dependencies: {  }
+id: gallery_image_preview
+label: 'Swiper Gallery - Image Preview'
+icon_uuid: null
+description: 'Swiper gallery with the first image as the preview launcher.'
+behavior_plugins: {  }

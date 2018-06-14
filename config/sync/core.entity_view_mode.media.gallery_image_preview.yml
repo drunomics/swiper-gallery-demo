@@ -1,0 +1,10 @@
+uuid: e42698ce-d2b2-41d8-b0d0-58312a1d664f
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.gallery_image_preview
+label: 'Gallery - Image Preview'
+targetEntityType: media
+cache: true

@@ -1,0 +1,41 @@
+uuid: 2dafc885-8324-4762-9da3-f4ac09136d83
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.gallery_image_preview
+    - field.field.media.gallery.field_media_images
+    - media_entity.bundle.gallery
+  module:
+    - empty_fields
+    - swiper_gallery
+_core:
+  default_config_hash: 1VGlpVCE0rY89vxi7HWldG7Gg37yM84QmIMvO_cYn3o
+id: media.gallery.gallery_image_preview
+targetEntityType: media
+bundle: gallery
+mode: gallery_image_preview
+content:
+  field_media_images:
+    weight: 0
+    label: hidden
+    settings:
+      launcher_main_text: 'Start gallery'
+      preview_footer: imageonly
+      launcher_footer_text: 'Show all'
+      image_style_preview_image: entity_browser_thumbnail
+      image_style_preview_thumbnail: entity_browser_thumbnail
+      image_style_gallery_slide: entity_browser_thumbnail
+      image_style_gallery_thumbnail: entity_browser_thumbnail
+      show_preview_headline: false
+    third_party_settings:
+      empty_fields:
+        handler: ''
+    type: swiper_gallery
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

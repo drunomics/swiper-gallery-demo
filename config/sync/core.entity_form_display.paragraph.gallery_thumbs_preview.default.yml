@@ -1,0 +1,25 @@
+uuid: 0c8ac7b4-bfbc-4042-9421-f7717957a8d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gallery_thumbs_preview.field_media
+    - paragraphs.paragraphs_type.gallery_thumbs_preview
+id: paragraph.gallery_thumbs_preview.default
+targetEntityType: paragraph
+bundle: gallery_thumbs_preview
+mode: default
+content:
+  field_media:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

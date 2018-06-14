@@ -1,0 +1,26 @@
+uuid: 3197051e-ffae-4028-8915-420477e9b51e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gallery_thumbs_preview.field_media
+    - paragraphs.paragraphs_type.gallery_thumbs_preview
+  module:
+    - empty_fields
+id: paragraph.gallery_thumbs_preview.default
+targetEntityType: paragraph
+bundle: gallery_thumbs_preview
+mode: default
+content:
+  field_media:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: gallery_thumbs_preview
+      link: false
+    third_party_settings:
+      empty_fields:
+        handler: ''
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

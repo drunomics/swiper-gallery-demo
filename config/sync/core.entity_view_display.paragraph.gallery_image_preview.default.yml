@@ -1,0 +1,26 @@
+uuid: 1b0e4fa4-590e-44c5-b9f5-90adf861115e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gallery_image_preview.field_media
+    - paragraphs.paragraphs_type.gallery_image_preview
+  module:
+    - empty_fields
+id: paragraph.gallery_image_preview.default
+targetEntityType: paragraph
+bundle: gallery_image_preview
+mode: default
+content:
+  field_media:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: gallery_image_preview
+      link: false
+    third_party_settings:
+      empty_fields:
+        handler: ''
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

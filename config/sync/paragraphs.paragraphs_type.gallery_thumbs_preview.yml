@@ -1,0 +1,9 @@
+uuid: e6e56377-a946-4896-8de8-3f459bf2ca77
+langcode: en
+status: true
+dependencies: {  }
+id: gallery_thumbs_preview
+label: 'Swiper Gallery - Thumbs Preview'
+icon_uuid: null
+description: 'Swiper gallery with the Thumbnails in the preview launcher.'
+behavior_plugins: {  }
