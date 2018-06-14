@@ -5,6 +5,9 @@ This project is maintained using composer. Please refer to the documentation
 provided at https://github.com/drupal-composer/drupal-project and 
 https://www.drupal.org/node/2471553.
 
+All photos in the examples are from https://www.pexels.com and licensed under 
+the Creative Commons Zero (CC0) license.
+
 ## Project setup with docker
 
 Install phapp as described below (Command line tools > Phapp).
