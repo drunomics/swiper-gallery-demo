@@ -23,10 +23,10 @@ content:
       launcher_main_text: 'Start gallery'
       preview_footer: thumbs
       launcher_footer_text: 'Show all'
-      image_style_preview_image: entity_browser_thumbnail
-      image_style_preview_thumbnail: entity_browser_thumbnail
-      image_style_gallery_slide: entity_browser_thumbnail
-      image_style_gallery_thumbnail: entity_browser_thumbnail
+      image_style_preview_image: swiper_gallery_preview
+      image_style_preview_thumbnail: swiper_gallery_preview_thumbnail
+      image_style_gallery_slide: swiper_gallery_slide
+      image_style_gallery_thumbnail: swiper_gallery_thumbnail
       show_preview_headline: false
     third_party_settings:
       empty_fields:
