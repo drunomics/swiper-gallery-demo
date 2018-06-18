@@ -30,11 +30,6 @@ branches:
     - /^release/
     - /^version/
 
-mysql:
-  database: drupal
-  username: root
-  encoding: utf8
-
 # Cache Composer, NPM & Drush directories.
 cache:
   directories:
@@ -55,10 +50,14 @@ before_install:
 
 install:
   - ./scripts/travis-install.sh
-  - ./scripts/run-server.sh
-  - ./scripts/init-project.sh
+
+before_script:
+  # Disable services enabled by default
+  - sudo /etc/init.d/mysql stop
 
 script:
+  - ./scripts/run-server.sh
+  - ./scripts/init-project.sh
   - curl -N http://localhost:80 | grep  "Drupal 8" -q
   - ./scripts/run-tests.sh
 

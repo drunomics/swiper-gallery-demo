@@ -1,1 +1,1 @@
-source dotenv/loader.sh && cd devsetup-docker && docker-compose $@;
+source dotenv/loader.sh && docker-compose $@;

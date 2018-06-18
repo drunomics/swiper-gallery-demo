@@ -15,7 +15,7 @@ Install phapp as described below (Command line tools > Phapp).
 ```bash
 composer install
 phapp setup docker
-phapp init
+./scripts/init-project.sh
 
 # Add hosts entry.
 echo $(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' swipergallerydemo_web_1) swiper-gallery-demo.local | sudo tee /etc/hosts -a
