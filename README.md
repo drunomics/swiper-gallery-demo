@@ -18,7 +18,7 @@ phapp setup docker
 ./scripts/init-project.sh
 
 # Add hosts entry.
-echo $(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' swipergallerydemo_web_1) swiper-gallery-demo.local | sudo tee /etc/hosts -a
+echo $(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' swipergallerydemo_web_1) swiper-gallery-demo.local | sudo tee -a /etc/hosts
 
 # Open http://swiper-gallery-demo.local
 ```
