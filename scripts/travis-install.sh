@@ -20,14 +20,5 @@ INSTALL_PROFILE_DIR=`basename $PWD`
 echo "Adding distribution..."
 composer config repositories.self path .
 
-echo "Adding custom environment variables..."
-
-cat - >> .defaults.env <<END
-  INSTALL_PROFILE=thunder
-  DEFAULT_LANGUAGE=en
-  COMPOSE_PROJECT_NAME=swiper-gallery-demo
-  ENV_UNIX_GROUP_WEBSERVER=www-data
-END
-
 echo "Setting up project..."
 phapp setup travis
