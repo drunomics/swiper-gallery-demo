@@ -1,0 +1,17 @@
+# Project variables.
+#
+# Host paths can be relative to the dransible folder.
+# Guest paths must be absolute.
+---
+
+project: "swiper-gallery-demo"
+nodes:
+  web:
+    memory: 2048
+    cpus: 4
+    # Used by vagrant docker setup.
+    docker_image_name: lamp
+
+# Used by drunomics CI.
+docker_image_name: lamp
+deploy_repository: git@github.com:drunomics/swiper-gallery-demo.git
