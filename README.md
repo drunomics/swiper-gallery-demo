@@ -15,6 +15,7 @@ Install phapp as described below (Command line tools > Phapp).
 ```bash
 composer install
 phapp setup docker
+./dcp.sh up -d
 ./scripts/init-project.sh
 
 # Add hosts entry.
@@ -22,6 +23,13 @@ echo $(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end
 
 # Open http://swiper-gallery-demo.local
 ```
+
+Alternatively, if you don't want to create the host entry, you can add 
+`$settings['trusted_host_patterns'][] = '^localhost$';` in your settings.php
+and use localhost instead.
+ 
+If you want to change ports, you can override the WEB_HTTP_PORT in a .local.env
+(see .defaults.env) and rebuild the docker container: `./dcp.sh up -d --build`.
 
 ## Command line tools
 
