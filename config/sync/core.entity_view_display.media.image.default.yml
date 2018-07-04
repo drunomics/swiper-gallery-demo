@@ -78,6 +78,7 @@ content:
       grid_header: ''
       grid_medium: 0
       grid_small: 0
+      box_media_style: ''
     third_party_settings: {  }
     type: blazy
     region: content

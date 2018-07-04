@@ -63,8 +63,17 @@ instructions on how to install phapp globally.
 # Initialize the setup.
 phapp setup docker
 
+# Run the docker container
+./dcp.sh up -d
+
+# Shutdown docker
+./dcp.sh down
+
+# Export init database & files.
+./dcp.sh exec web ./scripts/export-init.sh
+
 # Get in the docker web container (where you can use the phapp commands)
-docker-compose exec web bash
+./dcp.sh exec web bash
 
 # Initialize the application, after building it:
 phapp init

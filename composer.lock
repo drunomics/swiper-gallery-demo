@@ -1504,12 +1504,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drunomics/swiper-gallery.git",
-                "reference": "06d4a5ee0cfe12fa677a8b9cc80290c2fab2af96"
+                "reference": "5cbc1cc732b3c829a9be87a805bf099f31a1b6b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drunomics/swiper-gallery/zipball/06d4a5ee0cfe12fa677a8b9cc80290c2fab2af96",
-                "reference": "06d4a5ee0cfe12fa677a8b9cc80290c2fab2af96",
+                "url": "https://api.github.com/repos/drunomics/swiper-gallery/zipball/5cbc1cc732b3c829a9be87a805bf099f31a1b6b7",
+                "reference": "5cbc1cc732b3c829a9be87a805bf099f31a1b6b7",
                 "shasum": ""
             },
             "type": "drupal-module",
@@ -1527,7 +1527,7 @@
                 "source": "https://github.com/drunomics/swiper-gallery/tree/develop",
                 "issues": "https://github.com/drunomics/swiper-gallery/issues"
             },
-            "time": "2018-07-04T12:13:02+00:00"
+            "time": "2018-07-04T13:34:37+00:00"
         },
         {
             "name": "drupal-composer/drupal-scaffold",
