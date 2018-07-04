@@ -12,15 +12,16 @@ the Creative Commons Zero (CC0) license.
 
 Install phapp as described below (Command line tools > Phapp).
 
+If you want to change ports (http, mysql) make sure to override them before the 
+docker image is build by creating a .local.env, otherwise port 80 is used for 
+HTTP, and 3306 for MYSQL (see .defaults.env).
+
 ```bash
 composer install
 phapp setup docker
 ./scripts/init-project.sh
 
-# Add hosts entry.
-echo $(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' swipergallerydemo_web_1) swiper-gallery-demo.local | sudo tee -a /etc/hosts
-
-# Open http://swiper-gallery-demo.local
+# Open http://swiper-gallery-demo.localdev.space/gallery-demo
 ```
 
 Alternatively, if you don't want to create the host entry, you can add 
