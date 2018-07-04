@@ -1,4 +1,6 @@
-# swiper-gallery-demo
+Swiper Gallery Demo
+===================
+
 developed by drunomics GmbH, office@drunomics.com
 
 This project is maintained using composer. Please refer to the documentation 
@@ -8,32 +10,35 @@ https://www.drupal.org/node/2471553.
 All photos in the examples are from https://www.pexels.com and licensed under 
 the Creative Commons Zero (CC0) license.
 
-## Project setup with docker
+## Table of content
 
-Install phapp as described below (Command line tools > Phapp).
+  * [Docker setup](#docker-setup)
+     * [Environment variables](#environment-variables)
+     * [Command line tools](#command-line-tools)
+       * [Phapp](#phapp)
+       * [Drush](#drush)
+     * [Installation](#installation)
+  * [Useful commands](#useful-commands)
+  * [Running tests](#running-tests)
+  * [Coding style](#coding-style)
+     * [Pre-commit checks](#pre-commit-checks)
+     * [PHPstorm coding style configuration](#phpstorm-coding-style-configuration)
+
+## Docker setup
+
+### Environment variables
 
 If you want to change ports (http, mysql) make sure to override them before the 
 docker image is build by creating a .local.env, otherwise port 80 is used for 
 HTTP, and 3306 for MYSQL (see .defaults.env).
 
-```bash
-composer install
-phapp setup docker
-./scripts/init-project.sh
+If you change environment variables later on, you can rebuild the docker 
+container with: `./dcp.sh up -d --build`.
 
-# Open http://swiper-gallery-demo.localdev.space/gallery-demo
-```
+### Command line tools
 
-Alternatively, if you don't want to create the host entry, you can add 
-`$settings['trusted_host_patterns'][] = '^localhost$';` in your settings.php
-and use localhost instead.
- 
-If you want to change ports, you can override the WEB_HTTP_PORT in a .local.env
-(see .defaults.env) and rebuild the docker container: `./dcp.sh up -d --build`.
+#### Phapp
 
-## Command line tools
-
-### Phapp
 Version 0.6.2 or later is required. Either install it globally and run `phapp`
 or execute the embedded phapp version from the root repository directory:
 
@@ -46,14 +51,25 @@ just `phapp` always.
 Refer to [the project page](http://github.com/drunomics/phapp-cli) for
 instructions on how to install phapp globally.
 
-### Drush
+#### Drush
+
  To run drush, execute from the root repository directory:
  ```./vendor/bin/drush ```
 
  The more convenient alternative is to install a global launcher or a global
  drush with version 8, which includes a global launcher. Then, drush picks up
  the project-local drush automatically.
- For docs on drush see http://docs.drush.org/en/master/.
+ For docs on drush see <http://docs.drush.org/en/master/>.
+
+### Installation
+
+```bash
+composer install
+phapp setup docker
+./scripts/init-project.sh
+```
+
+The page should be available via <http://swiper-gallery-demo.localdev.space>
 
 ## Useful commands
 
