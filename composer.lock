@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "915730bb42475cc2975f15688d98f5d0",
+    "content-hash": "b32ae87674e2951a84a36267a6043fff",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1500,16 +1500,16 @@
         },
         {
             "name": "drunomics/swiper_gallery",
-            "version": "dev-master",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drunomics/swiper-gallery.git",
-                "reference": "c1963a536a6e23c55aafdadf058f4fe0030410a6"
+                "reference": "06d4a5ee0cfe12fa677a8b9cc80290c2fab2af96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drunomics/swiper-gallery/zipball/c1963a536a6e23c55aafdadf058f4fe0030410a6",
-                "reference": "c1963a536a6e23c55aafdadf058f4fe0030410a6",
+                "url": "https://api.github.com/repos/drunomics/swiper-gallery/zipball/06d4a5ee0cfe12fa677a8b9cc80290c2fab2af96",
+                "reference": "06d4a5ee0cfe12fa677a8b9cc80290c2fab2af96",
                 "shasum": ""
             },
             "type": "drupal-module",
@@ -1524,10 +1524,10 @@
             ],
             "description": "Swiper gallery media integration.",
             "support": {
-                "source": "https://github.com/drunomics/swiper-gallery/tree/master",
+                "source": "https://github.com/drunomics/swiper-gallery/tree/develop",
                 "issues": "https://github.com/drunomics/swiper-gallery/issues"
             },
-            "time": "2018-06-08T12:56:38+00:00"
+            "time": "2018-07-04T12:13:02+00:00"
         },
         {
             "name": "drupal-composer/drupal-scaffold",
