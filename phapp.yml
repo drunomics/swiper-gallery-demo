@@ -34,7 +34,7 @@ commands:
     if [ -f config/sync/core.extension.yml ]; then
       drush cim -y && drush cr
     fi
-    ./dcp.sh exec web tar -zxvf ./dumps/files.tar.gz
+    tar -zxvf ./dumps/files.tar.gz --no-overwrite-dir
 
   install: |
     chmod +w web/sites/default/settings.php &&

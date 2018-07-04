@@ -15,7 +15,6 @@ Install phapp as described below (Command line tools > Phapp).
 ```bash
 composer install
 phapp setup docker
-./dcp.sh up -d
 ./scripts/init-project.sh
 
 # Add hosts entry.
