@@ -1,39 +1,51 @@
 Swiper Gallery Demo
 ===================
 
-developed by drunomics GmbH, office@drunomics.com
+This is a drupal thunder demo site which demonstrates how the swiper gallery 
+module is used and what the gallery looks like in action. You can play around
+with the settings or create your own theme in a sandbox environment.
+
+The swiper gallery module provides a responsive integration of a [Swiper](http://idangero.us/swiper/) 
+gallery with the drupal media entity. Depending on the window size, the gallery
+consists of a horizontal slider with thumbnails in the desktop mode and turns 
+into a vertical slider in the mobile version. It also supports ad entity
+integration for putting ads in between the slides.
+
+## Table of content
+
+  * [Prerequisites](#prerequisites)
+    * [Environment variables](#environment-variables)
+    * [Command line tools](#command-line-tools)
+      * [Phapp](#phapp)
+      * [Drush](#drush)
+    * [Installation](#installation)
+  * [Useful commands](#useful-commands)
+  * [Running tests](#running-tests)
+  * [Coding style](#coding-style)
+    * [Pre-commit checks](#pre-commit-checks)
+    * [PHPstorm coding style configuration](#phpstorm-coding-style-configuration)
+  * [Contributors](#contributors)
+  * [License](#license)
+
+## Prerequisites
 
 This project is maintained using composer. Please refer to the documentation 
 provided at https://github.com/drupal-composer/drupal-project and 
 https://www.drupal.org/node/2471553.
 
-All photos in the examples are from https://www.pexels.com and licensed under 
-the Creative Commons Zero (CC0) license.
-
-## Table of content
-
-  * [Docker setup](#docker-setup)
-     * [Environment variables](#environment-variables)
-     * [Command line tools](#command-line-tools)
-       * [Phapp](#phapp)
-       * [Drush](#drush)
-     * [Installation](#installation)
-  * [Useful commands](#useful-commands)
-  * [Running tests](#running-tests)
-  * [Coding style](#coding-style)
-     * [Pre-commit checks](#pre-commit-checks)
-     * [PHPstorm coding style configuration](#phpstorm-coding-style-configuration)
-
-## Docker setup
+The demo page runs in a docker container which is configured via [docker compose](https://docs.docker.com/compose/). 
 
 ### Environment variables
 
-If you want to change ports (http, mysql) make sure to override them before the 
-docker image is build by creating a .local.env, otherwise port 80 is used for 
-HTTP, and 3306 for MYSQL (see .defaults.env).
+Default environments variables are set in `.defaults.env`. By default port 80 is 
+used for HTTP and port 3306 for MYSQL. To override them create a `.local.env`
+with your custom port settings.
 
-If you change environment variables later on, you can rebuild the docker 
+If you want to change environment variables later on, you can rebuild the docker 
 container with: `./dcp.sh up -d --build`.
+
+`./dcp.sh` is used within the project as a shorthand link to run 
+`docker-compose` within the current environment.
 
 ### Command line tools
 
@@ -69,7 +81,7 @@ phapp setup docker
 ./scripts/init-project.sh
 ```
 
-The page should be available via <http://swiper-gallery-demo.localdev.space>
+The page is available under <http://swiper-gallery-demo.localdev.space>
 
 ## Useful commands
 
@@ -159,7 +171,8 @@ code beautifier:
 
 ### Pre-commit checks
 
-Coding style can be checked automatically via Git's pre-commit hooks. To do so, just make sure to run the script `devsetup/setup-git-config.sh` at least once.
+Coding style can be checked automatically via Git's pre-commit hooks. To do so, 
+just make sure to run the script `devsetup/setup-git-config.sh` at least once.
 
 Once configured, running pre-commit hooks can be bypassed via the Git commmit
 `--no-verify` option.
@@ -175,3 +188,14 @@ Configure the following settings:
   - Show sniff name "true"
   - Coding standard: "custom", make it point to the phpcs.xml.dist file in the
     vcs root.
+
+## Contributors
+
+developed by drunomics GmbH, office@drunomics.com
+
+## License
+
+MIT © [drunomics GmbH](https://www.drunomics.com)
+
+All photos in the examples are from https://www.pexels.com and licensed under 
+the Creative Commons Zero (CC0) license.
