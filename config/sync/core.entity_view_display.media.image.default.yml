@@ -10,8 +10,10 @@ dependencies:
     - field.field.media.image.field_source
     - field.field.media.image.field_tags
     - media_entity.bundle.image
+    - responsive_image.styles.media_image
   module:
-    - blazy
+    - empty_fields
+    - responsive_image
 _core:
   default_config_hash: gYQgagpuplhSV2aBJdxJVrihXIEQEfkSW3lvTFxbFVU
 id: media.image.default
@@ -31,56 +33,12 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: ''
-      thumbnail_style: ''
       responsive_image_style: media_image
-      media_switch: ''
-      ratio: ''
-      sizes: ''
-      current_view_mode: default
-      background: false
-      caption:
-        title: '0'
-        alt: '0'
-      breakpoints:
-        xs:
-          breakpoint: ''
-          image_style: ''
-          width: ''
-        sm:
-          breakpoint: ''
-          image_style: ''
-          width: ''
-        md:
-          breakpoint: ''
-          image_style: ''
-          width: ''
-        lg:
-          breakpoint: ''
-          image_style: ''
-          width: ''
-        xl:
-          breakpoint: ''
-          image_style: ''
-          width: ''
-      box_caption: ''
-      box_caption_custom: ''
-      box_style: ''
-      iframe_lazy: true
-      icon: ''
-      layout: ''
-      view_mode: ''
-      cache: 0
-      optionset: default
-      skin: ''
-      style: ''
-      grid: 0
-      grid_header: ''
-      grid_medium: 0
-      grid_small: 0
-      box_media_style: ''
-    third_party_settings: {  }
-    type: blazy
+      image_link: ''
+    third_party_settings:
+      empty_fields:
+        handler: ''
+    type: responsive_image
     region: content
 hidden:
   created: true

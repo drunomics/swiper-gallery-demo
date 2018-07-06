@@ -21,14 +21,15 @@ content:
     label: hidden
     settings:
       launcher_main_text: 'Start gallery'
-      preview_footer: thumbs
       launcher_footer_text: 'Show all'
-      view_mode_gallery_slide: gallery_slide
+      preview_type: thumbs
+      view_mode_gallery_preview: default
       image_style_preview_image: swiper_gallery_preview
       image_style_preview_thumbnail: swiper_gallery_preview_thumbnail
+      view_mode_gallery_slide: gallery_slide
       image_style_gallery_thumbnail: swiper_gallery_thumbnail
+      hash_nav_replace_state: true
       show_preview_headline: false
-      hash_nav_replace_state: false
     third_party_settings:
       empty_fields:
         handler: ''
