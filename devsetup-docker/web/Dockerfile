@@ -41,7 +41,7 @@ RUN cd /root/playbooks && \
   rm /sbin/initctl && cp /sbin/initctl.distrib /sbin/initctl
 
 # Prepare web root.
-RUN mkdir /srv/default && ln -s vcs/$WEB_DIRECTORY /srv/default/web
+# RUN mkdir /srv/default && ln -s vcs/$WEB_DIRECTORY /srv/default/web
 # Expose mysql to host.
 RUN sed -i -- 's/bind_address = 127.0.0.1/bind_address = 0.0.0.0/g' /etc/mysql/conf.d/*.cnf
-WORKDIR /srv/default/vcs
+# WORKDIR /srv/default/vcs
