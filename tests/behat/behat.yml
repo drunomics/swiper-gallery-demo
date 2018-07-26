@@ -34,9 +34,9 @@ default:
         login_form_selector: 'form#user-login-form'
       text:
         # Login text customizations used by drupal-extension. Uncomment to use.
-        username_field: 'Benutzername'
-        password_field: 'Passwort'
-        log_in: 'Anmelden'
+        username_field: 'Username'
+        password_field: 'Password'
+        log_in: 'Log in'
 
 selenium:
   extensions:
