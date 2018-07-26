@@ -5,7 +5,7 @@
  * Some settings.php defaults that get included depending on the active environment.
  */
 
-$settings['trusted_host_patterns'][] = '^(.+\.)?swiper-gallery-demo.local';
+$settings['trusted_host_patterns'][] = '^(.+\.)?swiper-gallery-demo.localdev.space';
 
 // Default database connection.
 $databases['default']['default'] = array(

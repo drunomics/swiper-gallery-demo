@@ -1,0 +1,10 @@
+uuid: 222c95b4-20be-4dcf-a0b5-c56381d389b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.gallery_media_preview_image
+label: 'Gallery Media Preview Image'
+targetEntityType: media
+cache: true

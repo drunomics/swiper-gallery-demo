@@ -82,6 +82,7 @@ phapp setup docker
 ```
 
 The page is available under <http://swiper-gallery-demo.localdev.space>
+Admin: dru_admin / dru_admin
 
 ## Useful commands
 

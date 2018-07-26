@@ -21,14 +21,16 @@ content:
     label: hidden
     settings:
       launcher_main_text: 'Start gallery'
-      launcher_footer_text: 'Show all'
+      launcher_thumbnails_text: 'Show all'
       preview_type: media
-      view_mode_gallery_preview: default
-      image_style_preview_image: swiper_gallery_preview
-      image_style_preview_thumbnail: swiper_gallery_preview_thumbnail
+      view_mode_gallery_preview: gallery_media_preview_image
+      view_mode_gallery_preview_with_thumbs: gallery_thumbs_preview_image
+      view_mode_gallery_preview_thumb: gallery_thumbs_preview_thumbnail
       view_mode_gallery_slide: gallery_slide
       image_style_gallery_thumbnail: swiper_gallery_thumbnail
       hash_nav_replace_state: true
+      breaker_block: ''
+      breaker_position: '6'
       show_preview_headline: false
     third_party_settings:
       empty_fields:
