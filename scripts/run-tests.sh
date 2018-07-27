@@ -1,5 +1,18 @@
 #!/usr/bin/env bash
 
+for i in "$@"
+do
+  case $i in
+      --headless)
+      HEADLESS=1
+      shift
+      ;;
+      *)
+            # unknown option
+      ;;
+  esac
+done
+
 ARGS=""
 
 if [[ $HEADLESS = "1" ]]; then

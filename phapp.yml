@@ -5,7 +5,7 @@ git:
 commands:
   setup: |
     echo "PHAPP_ENV=$PHAPP_ENV" > .env-id.env
-    if [ "$PHAPP_ENV" = "docker" ]; then
+    if [ "$PHAPP_ENV" = "docker" ] || [ "$PHAPP_ENV" = "travis" ]; then
       ./dcp.sh up -d
       ./dcp.sh exec web ./scripts/setup-base.sh
     else

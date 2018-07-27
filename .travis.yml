@@ -11,6 +11,7 @@ env:
   global:
     - DOCKER_COMPOSE_VERSION=1.19.0
 addons:
+  chrome: stable
   apt:
     packages:
       - docker-ce
@@ -48,18 +49,16 @@ before_install:
   - chmod +x docker-compose
   - sudo mv docker-compose /usr/local/bin
 
-install:
-  - ./scripts/travis-install.sh
-
-before_script:
   # Disable services enabled by default
   - sudo /etc/init.d/mysql stop
 
-script:
-  - ./scripts/run-server.sh
+install:
+  - ./scripts/travis-install.sh
   - ./scripts/init-project.sh
-  - curl -N http://localhost:80 | grep  "Drupal 8" -q
-  - ./scripts/run-tests.sh
+
+script:
+  - curl -N http://localhost:80
+  - ./scripts/run-tests.sh --headless
 
 after_success:
   - echo "SUCCESS!"
