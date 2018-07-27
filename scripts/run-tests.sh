@@ -7,8 +7,12 @@ do
       HEADLESS=1
       shift
       ;;
+      --xdebug)
+      export XDEBUG_CONFIG="remote_enable=1 remote_mode=req remote_port=9000 remote_host=127.0.0.1 remote_connect_back=0"
+      shift
+      ;;
       *)
-            # unknown option
+      # unknown option
       ;;
   esac
 done
@@ -22,7 +26,7 @@ fi
 (google-chrome-stable $ARGS --user-data-dir=${HOME}/.google-chrome/behat --remote-debugging-address=127.0.0.1 --remote-debugging-port=9222 )&
 
 cd `dirname $0`/..
-./tests/behat/run.sh
+./tests/behat/run.sh $@
 
 # End with stopping all sub-process; i.e. chrome.
 [[ -z "$(jobs -p)" ]] || kill $(jobs -p)

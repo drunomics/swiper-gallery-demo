@@ -1,20 +1,21 @@
 @api
 @smoke
+@drupal-base
 Feature: Drupal basically works.
 
   Make sure Drupal generates the front page, error pages as well as logging in
   and out.
 
-  Scenario: Drupal generates a page
+  Scenario: Drupal generates a page.
     Given I am on "/"
     Then the response should contain "Drupal 8 ("
 
-  Scenario: Drupal generates a 404 response
+  Scenario: Drupal generates a 404 response.
     Given I am an anonymous user
     And I am on "some-not-existing-page"
     Then the response status code should be 404
 
-  Scenario: Drupal generates a 403 response
+  Scenario: Drupal generates a 403 response.
     Given I am an anonymous user
     And I am on "/admin"
     Then the response status code should be 403
