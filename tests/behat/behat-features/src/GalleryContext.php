@@ -42,8 +42,7 @@ class GalleryContext extends RawDrupalContext {
           ->evaluateScript("jQuery('.gallery-launcher-main').first().click()");
     }
 
-    $this->getSession()->getDriver()
-      ->wait(500, "jQuery('.featherlight .gallery.is-active').length == 1");
+    $this->waitForGalleryOpen();
   }
 
   /**
@@ -57,8 +56,7 @@ class GalleryContext extends RawDrupalContext {
     $this->getSession()
       ->evaluateScript("jQuery('.featherlight-close').click()");
 
-    $this->getSession()->getDriver()
-      ->wait(500, "jQuery('.featherlight .gallery.is-active').length == 0");
+    $this->waitForGalleryClose();
   }
 
   /**
@@ -91,11 +89,24 @@ class GalleryContext extends RawDrupalContext {
    *
    * @Then I should see the :index slide
    */
-  public function activeSlide($index) {
+  public function activeSlideByIndex($index) {
     $result = $this->getSession()
       ->evaluateScript("jQuery('.gallery.is-active .gallery__main .swiper-slide-active').attr('data-swiper-slide-index')");
     if (is_null($result) || ++$result != $index) {
-      throw new ExpectationException('The current index is ' . (is_null($result) ? 'not found' : $result), $this->getSession());
+      throw new ExpectationException('The index of the active slide is ' . (is_null($result) ? '-not found-' : $result), $this->getSession());
+    }
+  }
+
+  /**
+   * Checks the active slide on the gallery.
+   *
+   * @Then I should see the slide with id :id
+   */
+  public function activeSlideById($id) {
+    $result = $this->getSession()
+      ->evaluateScript("jQuery('.gallery.is-active .gallery__main .swiper-slide-active').attr('slide-id')");
+    if (is_null($result) || $result != $id) {
+      throw new ExpectationException('The id of the active slide is ' . (is_null($result) ? '-not found-' : $result), $this->getSession());
     }
   }
 
@@ -112,6 +123,61 @@ class GalleryContext extends RawDrupalContext {
       ->evaluateScript(static::SWIPER_THUMB . ".slideTo($index)");
     $this->getSession()->getDriver()
       ->wait(500, "jQuery('.gallery.is-active .gallery__main .swiper-slide-active').attr('data-swiper-slide-index') == " . $index);
+  }
+
+  /**
+   * Set or remove the hash via javascript.
+   *
+   * @When I set the hash to :hash
+   * @When I remove the hash from the url
+   */
+  public function setHash($hash = NULL) {
+    $this->getSession()
+      ->evaluateScript("location.hash = '{$hash}'");
+
+    if (empty($hash)) {
+      $this->waitForGalleryClose();
+    }
+    else {
+      $this->waitForGalleryOpen();
+    }
+  }
+
+  /**
+   * Check the current hash.
+   *
+   * @Then the hash should be :hash
+   */
+  public function hashIs($hash) {
+    $hash = '#' . $hash;
+    $current0 = $this->getSession()->evaluateScript('window.location.hash');
+    // Wait for possible hash update.
+    $this->getSession()->getDriver()->wait(300, "window.location.hash != '{$current0}'");
+    $current = $this->getSession()->evaluateScript('window.location.hash');
+
+    if ($current != $hash) {
+      throw new ExpectationException('Expected hash: ' . $hash . ', actual: ' . $current, $this->getSession());
+    }
+  }
+
+  /**
+   * Wait until the gallery is closed.
+   *
+   * @When I wait for the gallery to be closed
+   */
+  public function waitForGalleryClose() {
+    $this->getSession()->getDriver()
+      ->wait(500, "jQuery('.featherlight .gallery.is-active').length == 0");
+  }
+
+  /**
+   * Wait until the gallery is shown.
+   *
+   * @When I wait for the gallery to be open
+   */
+  public function waitForGalleryOpen() {
+    $this->getSession()->getDriver()
+      ->wait(500, "jQuery('.featherlight .gallery.is-active').length == 1");
   }
 
 }
