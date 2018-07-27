@@ -1,0 +1,10 @@
+uuid: cbe37b44-9ced-4abd-8c83-ab643b41ace3
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.gallery_breaker
+label: 'Gallery - Breaker'
+targetEntityType: media
+cache: true

@@ -1,0 +1,26 @@
+uuid: 8e32272f-5481-4bf5-9436-c6559922e999
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.swiper_gallery_breaker.field_media
+    - paragraphs.paragraphs_type.swiper_gallery_breaker
+  module:
+    - empty_fields
+id: paragraph.swiper_gallery_breaker.default
+targetEntityType: paragraph
+bundle: swiper_gallery_breaker
+mode: default
+content:
+  field_media:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: gallery_breaker
+      link: false
+    third_party_settings:
+      empty_fields:
+        handler: ''
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

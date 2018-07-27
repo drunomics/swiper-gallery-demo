@@ -13,6 +13,7 @@ dependencies:
     - paragraphs.paragraphs_type.link
     - paragraphs.paragraphs_type.pinterest
     - paragraphs.paragraphs_type.quote
+    - paragraphs.paragraphs_type.swiper_gallery_breaker
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.twitter
     - paragraphs.paragraphs_type.video
@@ -46,6 +47,7 @@ settings:
       pinterest: pinterest
       gallery_image_preview: gallery_image_preview
       gallery_thumbs_preview: gallery_thumbs_preview
+      swiper_gallery_breaker: swiper_gallery_breaker
     target_bundles_drag_drop:
       text:
         enabled: true
@@ -80,4 +82,7 @@ settings:
       gallery_thumbs_preview:
         enabled: true
         weight: 14
+      swiper_gallery_breaker:
+        enabled: true
+        weight: 21
 field_type: entity_reference_revisions

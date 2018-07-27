@@ -1,0 +1,9 @@
+uuid: 1194f66a-b87d-449a-9815-2da12358af8e
+langcode: en
+status: true
+dependencies: {  }
+id: swiper_gallery_breaker
+label: 'Swiper Gallery - Breaker'
+icon_uuid: null
+description: 'Swiper gallery with breaker.'
+behavior_plugins: {  }
