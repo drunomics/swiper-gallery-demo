@@ -112,6 +112,10 @@ phapp update
 
 # Install from scratch.
 phapp install
+
+# In case apache is not running
+./dcp.sh exec web bash 
+rm /var/run/apache2/apache2.pid && /etc/init.d/apache2 start
 ```
 
 If composer install has been run and one wants to skip building again during

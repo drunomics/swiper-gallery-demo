@@ -83,6 +83,17 @@ class GalleryContext extends RawDrupalContext {
   }
 
   /**
+   * @Then the swiper variant should be :variant
+   */
+  public function swiperVariant($variant) {
+    $result = $this->getSession()
+      ->evaluateScript("document.querySelector('.gallery.is-active .gallery__main .swiper-container').classList.contains('swiper-container-{$variant}')");
+    if (!$result) {
+      throw new ExpectationException('Swiper container does not match the expected variant: ' . $variant, $this->getSession());
+    }
+  }
+
+  /**
    * Checks the active slide on the gallery.
    *
    * Example: Then I should see the 1 slide
@@ -178,6 +189,18 @@ class GalleryContext extends RawDrupalContext {
   public function waitForGalleryOpen() {
     $this->getSession()->getDriver()
       ->wait(500, "jQuery('.featherlight .gallery.is-active').length == 1");
+  }
+
+  /**
+   * Resize window.
+   *
+   * @Given /^I set browser window size to "([^"]*)" x "([^"]*)"$/
+   */
+  public function resizeWindow($width, $height) {
+    $width = (int) $width;
+    $height = (int) $height;
+    $this->getSession()->resizeWindow($width, $height, 'current');
+    $this->getSession()->wait(200);
   }
 
 }
