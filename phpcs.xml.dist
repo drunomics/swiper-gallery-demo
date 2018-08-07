@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<ruleset name="drunomics_d8">
+<ruleset name="swiper_gallery">
 
-  <description>Default drunomics Coding Style for Drupal 8.</description>
+  <description>Coding Style for SwiperGallery project.</description>
 
   <file>./tests/behat/behat-features/src</file>
   <file>./devsetup</file>
   <file>./scripts</file>
   <file>./web/modules/custom</file>
+  <file>./web/modules/drunomics/swiper_gallery</file>
 
   <exclude-pattern>./scripts/composer/ScriptHandler.php</exclude-pattern>
+
+  <!-- Exclude build assets (minified css & js). -->
+  <exclude-pattern>./web/modules/drunomics/swiper_gallery/build/assets</exclude-pattern>
 
   <arg name="extensions" value="inc,install,module,php,profile,test,theme"/>
   <arg value="s"/>

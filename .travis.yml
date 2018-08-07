@@ -57,6 +57,7 @@ install:
   - ./scripts/init-project.sh
 
 script:
+  - ./vendor/bin/phpcs --colors
   - ./scripts/run-tests.sh --headless
 
 after_success:

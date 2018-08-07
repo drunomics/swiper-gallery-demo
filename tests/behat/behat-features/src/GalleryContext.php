@@ -48,7 +48,7 @@ class GalleryContext extends RawDrupalContext {
   /**
    * Closes the gallery by pressing the X-button.
    *
-   * Example: And I close the gallery
+   * Example: And I close the gallery.
    *
    * @When I close the gallery
    */
@@ -62,8 +62,8 @@ class GalleryContext extends RawDrupalContext {
   /**
    * Checks in what status the gallery is.
    *
-   * Example: Then the gallery should be open
-   * Example: Then the gallery should be closed
+   * Example: Then the gallery should be open,
+   * Example: Then the gallery should be closed.
    *
    * @Then the gallery should be :status
    */
@@ -96,7 +96,7 @@ class GalleryContext extends RawDrupalContext {
   /**
    * Checks the active slide on the gallery.
    *
-   * Example: Then I should see the 1 slide
+   * Example: Then I should see the 1 slide.
    *
    * @Then I should see the :index slide
    */
@@ -124,7 +124,7 @@ class GalleryContext extends RawDrupalContext {
   /**
    * Click on a thumbnail.
    *
-   * Example: Then I click the 2 thumbnail
+   * Example: Then I click the 2 thumbnail.
    *
    * @When I click the :index thumbnail
    */
