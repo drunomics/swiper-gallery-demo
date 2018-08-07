@@ -27,6 +27,14 @@ fi
 
 cd `dirname $0`/..
 ./tests/behat/run.sh $@
+behat_exit=$?
 
 # End with stopping all sub-process; i.e. chrome.
 [[ -z "$(jobs -p)" ]] || kill $(jobs -p)
+
+if [ "$behat_exit" -eq 0 ]
+then
+  exit 0
+else
+  exit 1
+fi
