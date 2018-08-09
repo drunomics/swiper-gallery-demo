@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "53786ac70fb4f2c50aff73d8068f6bdc",
@@ -1504,12 +1504,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drunomics/swiper-gallery.git",
-                "reference": "5d74f484fbeba7f66df62c3b4ab932cee5ead78b"
+                "reference": "8298defebd5a4e470051143bd9e6b56f580368b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drunomics/swiper-gallery/zipball/5d74f484fbeba7f66df62c3b4ab932cee5ead78b",
-                "reference": "5d74f484fbeba7f66df62c3b4ab932cee5ead78b",
+                "url": "https://api.github.com/repos/drunomics/swiper-gallery/zipball/8298defebd5a4e470051143bd9e6b56f580368b3",
+                "reference": "8298defebd5a4e470051143bd9e6b56f580368b3",
                 "shasum": ""
             },
             "type": "drupal-module",
@@ -1527,7 +1527,7 @@
                 "source": "https://github.com/drunomics/swiper-gallery/tree/develop",
                 "issues": "https://github.com/drunomics/swiper-gallery/issues"
             },
-            "time": "2018-07-26T14:53:13+00:00"
+            "time": "2018-08-09T10:46:42+00:00"
         },
         {
             "name": "drupal-composer/drupal-scaffold",
