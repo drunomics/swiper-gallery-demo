@@ -6,8 +6,8 @@
 cd `dirname $0`/..
 
 # Copy example settings.
-cp web/sites/example.local.services.yml web/sites/local.services.yml
-cp web/sites/example.local.settings.php web/sites/local.settings.php
+[ -f web/sites/local.services.yml ] || cp web/sites/example.local.services.yml web/sites/local.services.yml
+[ -f web/sites/local.settings.php ] || cp web/sites/example.local.settings.php web/sites/local.settings.php
 
 # For drunomics-CI generate additional variables that can be used in its
 # dotenv file.

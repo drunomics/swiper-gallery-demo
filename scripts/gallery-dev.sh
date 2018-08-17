@@ -11,3 +11,5 @@ git pull
 
 cd build
 npm install
+
+echo $(pwd)
