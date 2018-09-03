@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53786ac70fb4f2c50aff73d8068f6bdc",
+    "content-hash": "3eeb0a2422e5e6454d417310d70bc073",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1500,16 +1500,16 @@
         },
         {
             "name": "drunomics/swiper_gallery",
-            "version": "dev-develop",
+            "version": "1.0-beta1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drunomics/swiper-gallery.git",
-                "reference": "1c7ecd02029f3ed1bf739257697a05e0ab7a6d40"
+                "reference": "8298defebd5a4e470051143bd9e6b56f580368b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drunomics/swiper-gallery/zipball/1c7ecd02029f3ed1bf739257697a05e0ab7a6d40",
-                "reference": "1c7ecd02029f3ed1bf739257697a05e0ab7a6d40",
+                "url": "https://api.github.com/repos/drunomics/swiper-gallery/zipball/8298defebd5a4e470051143bd9e6b56f580368b3",
+                "reference": "8298defebd5a4e470051143bd9e6b56f580368b3",
                 "shasum": ""
             },
             "type": "drupal-module",
@@ -1527,7 +1527,7 @@
                 "source": "https://github.com/drunomics/swiper-gallery/tree/develop",
                 "issues": "https://github.com/drunomics/swiper-gallery/issues"
             },
-            "time": "2018-08-17T16:01:40+00:00"
+            "time": "2018-08-09T10:46:42+00:00"
         },
         {
             "name": "drupal-composer/drupal-scaffold",
@@ -11376,9 +11376,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "drunomics/swiper_gallery": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
