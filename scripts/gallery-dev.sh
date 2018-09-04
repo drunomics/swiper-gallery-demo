@@ -5,8 +5,9 @@ cd `dirname $0`/../web/modules/drunomics/swiper_gallery
 
 git remote show composer 2> /dev/null && git remote remove composer
 
-git checkout develop
-git branch --set-upstream-to=origin/develop develop
+git fetch
+git checkout 8.x-1.x
+git branch --set-upstream-to=origin/8.x-1.x 8.x-1.x
 git pull
 
 cd build
