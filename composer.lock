@@ -1500,16 +1500,16 @@
         },
         {
             "name": "drunomics/swiper_gallery",
-            "version": "1.0-beta3",
+            "version": "1.0-beta4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drunomics/swiper-gallery.git",
-                "reference": "5e4ee137274d1c85f15a2572348de47f7dd6361b"
+                "reference": "8964ab71c5974eb6e9f607d0de1995d776ec98d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drunomics/swiper-gallery/zipball/5e4ee137274d1c85f15a2572348de47f7dd6361b",
-                "reference": "5e4ee137274d1c85f15a2572348de47f7dd6361b",
+                "url": "https://api.github.com/repos/drunomics/swiper-gallery/zipball/8964ab71c5974eb6e9f607d0de1995d776ec98d7",
+                "reference": "8964ab71c5974eb6e9f607d0de1995d776ec98d7",
                 "shasum": ""
             },
             "type": "drupal-module",
@@ -1524,10 +1524,10 @@
             ],
             "description": "Swiper gallery media integration.",
             "support": {
-                "source": "https://github.com/drunomics/swiper-gallery/tree/8.x-1.0-beta3",
+                "source": "https://github.com/drunomics/swiper-gallery/tree/8.x-1.0-beta4",
                 "issues": "https://github.com/drunomics/swiper-gallery/issues"
             },
-            "time": "2018-09-04T15:20:12+00:00"
+            "time": "2018-09-14T12:59:00+00:00"
         },
         {
             "name": "drupal-composer/drupal-scaffold",
