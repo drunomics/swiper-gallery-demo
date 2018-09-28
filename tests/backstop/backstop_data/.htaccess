@@ -1,0 +1,5 @@
+<IfModule mod_headers.c>
+   <If "%{THE_REQUEST} =~ m#[GET] /backstopjs/html_report#">
+       Header set Cache-Control "max-age=0, public, must-revalidate"
+   </If>
+</IfModule>

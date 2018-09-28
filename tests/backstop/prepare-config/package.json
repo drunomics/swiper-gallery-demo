@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "dependencies": {
+    "@drunomics/drunomics-backstop-config": "^0.0.8"
+  },
+  "scripts": {
+    "start": "npm install && backstop-config -u $BASE_URL -p ${CONFIG_FILE:-../backstop.json} -e ${ENGINE:-chrome} -s"
+  }
+}

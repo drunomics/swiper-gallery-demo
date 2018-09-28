@@ -30,3 +30,6 @@
 !/.defaults.env
 dumps/sync
 node_modules
+
+# Ignore published test reports.
+/docroot/backstopjs

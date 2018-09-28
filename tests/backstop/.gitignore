@@ -1,0 +1,9 @@
+# Exclude build and run results.
+
+node_modules
+/backstop_data/bitmaps_test
+/backstop_data/ci_report
+/backstop_data/html_report/*
+
+# Exclude prepared config.
+/backstop.config-prepared.json
