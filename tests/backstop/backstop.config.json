@@ -32,7 +32,7 @@
   "scenarios": [
     {
       "label": "First Slide",
-      "url": "http://swiper-gallery-demo.localdev.space/gallery-media-preview#slide-f6e79-24",
+      "url": "http://swiper-gallery-demo.localdev.space/gallery-media-preview",
       "readySelector": "",
       "delay": 2000,
       "hideSelectors": [],
