@@ -62,8 +62,8 @@
   },
   "engine": "chrome",
   "engineOptions": {
-    "waitTimeout": 120000,
-    "gotoTimeout": 120000,
+    "waitTimeout": 5000,
+    "gotoTimeout": 5000,
     "evaluateTimeout": 30000
   },
   "engineFlags": [],
