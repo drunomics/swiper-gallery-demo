@@ -21,6 +21,8 @@ integration for putting ads in between the slides.
     * [Installation](#installation)
   * [Useful commands](#useful-commands)
   * [Running tests](#running-tests)
+    * [Behat tests](#behat-tests)
+    * [Visual regression tests](#visual-regression-tests)
   * [Coding style](#coding-style)
     * [Pre-commit checks](#pre-commit-checks)
     * [PHPstorm coding style configuration](#phpstorm-coding-style-configuration)
@@ -148,6 +150,8 @@ drush cr
 
 ## Running tests
 
+### Behat tests
+
 Tests are implemented using behat. To run all tests, a recent chrome browser
 (59+) that is used for headless tests.
 
@@ -162,6 +166,26 @@ Any further arguments are forwarded to behat:
 By default chrome is shown. To run it in headless mode use:
 
     HEADLESS=1 ./tests/behat/run.sh
+
+### Visual regression tests
+
+Visual regression tests are powered by backstopjs and executed using a headless
+chrome instance.
+
+Ressources:
+ - https://garris.github.io/BackstopJS/
+ - https://github.com/garris/BackstopJS#the-backstopjs-workflow
+
+Within the backstop folder: 
+
+    # Run the tests. This puts a report in ...
+    ./tests/backstop/run.sh test
+    
+    # When the reference should be updated.
+    ./tests/backstop/run.sh reference
+
+    # If you want to approve a failed test after some changes, run: 
+    ./tests/backstop/run.sh approve`
 
 ## Coding style
 

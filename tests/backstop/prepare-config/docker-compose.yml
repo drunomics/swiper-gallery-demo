@@ -1,0 +1,13 @@
+version: "2"
+services:
+  node:
+    image: "node:8"
+    user: "root"
+    working_dir: /home/node/app
+    environment:
+      - BASE_URL=$BASE_URL
+      - CONFIG_FILE=/backstop/backstop.config-prepared.json
+    volumes:
+      - ./:/home/node/app
+      - ../:/backstop
+    command: 'npm start'

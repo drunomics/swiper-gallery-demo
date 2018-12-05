@@ -11,6 +11,10 @@ do
       export XDEBUG_CONFIG="remote_enable=1 remote_mode=req remote_port=9000 remote_host=127.0.0.1 remote_connect_back=0"
       shift
       ;;
+      --vrt)
+      VRT=1
+      shift
+      ;;
       *)
       # unknown option
       ;;
@@ -27,14 +31,15 @@ fi
 
 cd `dirname $0`/..
 ./tests/behat/run.sh $@
-behat_exit=$?
+EXIT_CODE=$?
+
+if [[ $VRT = "1" ]]; then
+  ./tests/backstop/run.sh test
+  vrt_exit=$?
+  EXIT_CODE=$(( vrt_exit > EXIT_CODE ? vrt_exit : EXIT_CODE ))
+fi
 
 # End with stopping all sub-process; i.e. chrome.
 [[ -z "$(jobs -p)" ]] || kill $(jobs -p)
 
-if [ "$behat_exit" -eq 0 ]
-then
-  exit 0
-else
-  exit 1
-fi
+exit "$EXIT_CODE"

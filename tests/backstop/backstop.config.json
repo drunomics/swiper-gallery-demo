@@ -1,0 +1,77 @@
+{
+  "id": "swiper_gallery",
+  "viewports": [
+    {
+      "label": "Desktop",
+      "width": 1388,
+      "height": 900
+    },
+    {
+      "label": "Desktop Small",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "label": "Tablet",
+      "width": 768,
+      "height": 1366
+    },
+    {
+      "label": "Mobile",
+      "width": 360,
+      "height": 480
+    },
+    {
+      "label": "Mobile Small",
+      "width": 320,
+      "height": 480
+    }
+  ],
+  "onBeforeScript": "chromy/onBefore.js",
+  "onReadyScript": "chromy/onReady.js",
+  "scenarios": [
+    {
+      "label": "First Slide",
+      "url": "http://swiper-gallery-demo.localdev.space/gallery-media-preview",
+      "readySelector": "",
+      "delay": 2000,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": ".gallery-launcher-main__wrapper",
+      "postInteractionWait": "",
+      "selectors": [],
+      "selectorExpansion": true,
+      "misMatchThreshold": 0.1,
+      "requireSameDimensions": true
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": [
+    "CI"
+  ],
+  "ci": {
+    "format": "junit",
+    "testSuiteName": "SwigerGallery"
+  },
+  "engine": "chrome",
+  "engineOptions": {
+    "waitTimeout": 5000,
+    "gotoTimeout": 5000,
+    "evaluateTimeout": 30000
+  },
+  "engineFlags": [],
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "resembleOutputOptions": {
+    "ignoreAntialiasing": true
+  },
+  "debug": false,
+  "debugWindow": false
+}
