@@ -1,5 +1,5 @@
 {
-  "id": "backstop_default",
+  "id": "swiper_gallery",
   "viewports": [
     {
       "label": "Desktop",
@@ -31,15 +31,14 @@
   "onReadyScript": "chromy/onReady.js",
   "scenarios": [
     {
-      "label": "Yoinks",
-      "url": "http://swiper-gallery-demo.localdev.space",
-      "referenceUrl": "http://swiper-gallery-demo.localdev.space",
+      "label": "First Slide",
+      "url": "http://swiper-gallery-demo.localdev.space/gallery-media-preview#slide-f6e79-24",
       "readySelector": "",
-      "delay": 1000,
+      "delay": 2000,
       "hideSelectors": [],
       "removeSelectors": [],
       "hoverSelector": "",
-      "clickSelector": "",
+      "clickSelector": ".gallery-launcher-main__wrapper",
       "postInteractionWait": "",
       "selectors": [],
       "selectorExpansion": true,
@@ -73,6 +72,6 @@
   "resembleOutputOptions": {
     "ignoreAntialiasing": true
   },
-  "debug": true,
-  "debugWindow": true
+  "debug": false,
+  "debugWindow": false
 }

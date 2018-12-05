@@ -2,7 +2,6 @@ module.exports = function (chromy, scenario) {
   var hoverSelector = scenario.hoverSelector;
   var clickSelector = scenario.clickSelector;
   var postInteractionWait = scenario.postInteractionWait; // selector [str] | ms [int]
-  var selectorsThatShouldNotBeWaitedFor = ['.burger-menu-button__icon'];
 
   if (hoverSelector) {
     chromy
@@ -13,10 +12,7 @@ module.exports = function (chromy, scenario) {
       });
   }
 
-  if(selectorsThatShouldNotBeWaitedFor.includes(clickSelector)) {
-    chromy.click(clickSelector);
-  }
-  else if (clickSelector) {
+  if (clickSelector) {
     chromy
       .wait(clickSelector)
       .click(clickSelector);
