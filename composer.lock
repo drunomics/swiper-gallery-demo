@@ -82,7 +82,7 @@
             "version": "v5.1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/enyo/dropzone.git",
+                "url": "git@github.com:enyo/dropzone.git",
                 "reference": "7d0792d1346d83a8b0c0d2919121bdd2b8e7fee4"
             },
             "dist": {
@@ -98,12 +98,12 @@
             "version": "v2.3.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:jseidelin/exif-js.git",
+                "url": "https://github.com/exif-js/exif-js.git",
                 "reference": "a10f3d53f3f72defef4cad5a54a90ee308901fe6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jseidelin/exif-js/zipball/a10f3d53f3f72defef4cad5a54a90ee308901fe6",
+                "url": "https://api.github.com/repos/exif-js/exif-js/zipball/a10f3d53f3f72defef4cad5a54a90ee308901fe6",
                 "reference": "a10f3d53f3f72defef4cad5a54a90ee308901fe6",
                 "shasum": null
             },
@@ -1500,16 +1500,16 @@
         },
         {
             "name": "drunomics/swiper_gallery",
-            "version": "1.0-beta5",
+            "version": "1.0-beta8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drunomics/swiper-gallery.git",
-                "reference": "e6dcdb7f5d26296286ff3439d3363f60d2513cae"
+                "reference": "d8533418bfd00442183ac4e8d378b648fb0dc9e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drunomics/swiper-gallery/zipball/e6dcdb7f5d26296286ff3439d3363f60d2513cae",
-                "reference": "e6dcdb7f5d26296286ff3439d3363f60d2513cae",
+                "url": "https://api.github.com/repos/drunomics/swiper-gallery/zipball/d8533418bfd00442183ac4e8d378b648fb0dc9e9",
+                "reference": "d8533418bfd00442183ac4e8d378b648fb0dc9e9",
                 "shasum": ""
             },
             "type": "drupal-module",
@@ -1524,10 +1524,10 @@
             ],
             "description": "Swiper gallery media integration.",
             "support": {
-                "source": "https://github.com/drunomics/swiper-gallery/tree/8.x-1.0-beta5",
+                "source": "https://github.com/drunomics/swiper-gallery/tree/8.x-1.0-beta8",
                 "issues": "https://github.com/drunomics/swiper-gallery/issues"
             },
-            "time": "2018-09-14T16:04:10+00:00"
+            "time": "2019-01-22T11:14:03+00:00"
         },
         {
             "name": "drupal-composer/drupal-scaffold",

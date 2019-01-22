@@ -161,7 +161,7 @@ To run the tests in the vagrant environment the following commands can be used:
 
 Any further arguments are forwarded to behat:
 
-    ./tests/behat/run.sh --tags=javascript
+    ./tests/behat/run.sh --tags=@javascript
 
 By default chrome is shown. To run it in headless mode use:
 
